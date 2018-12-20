@@ -1,0 +1,75 @@
+@import "variables";
+
+* { box-sizing: border-box; }
+
+body { 
+	font-family: sans-serif;
+	background-color: $main-color;
+	color: $third-color;
+ }
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 200px;
+}
+
+h1.place {
+	color: $third-color;
+	text-shadow: 1px 1px $fourth-color;
+}
+
+.restart {
+	position: absolute;
+	top: calc(50vh - 40px);
+	right: 100px;
+	height: 40px;
+	width: 80px;
+	right: 0;
+	color: $fiveth-color;
+	border: none;
+	border-radius: 3px 3px 0;
+	cursor: pointer;
+	&:hover{
+		color: white;
+		background-color:$fiveth-color;
+	}
+	&:focus{
+		outline: none;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $third-color;
+	font-size: 18px;
+}
+
+.carousel-cell {
+	width: 100%;
+	height: 50vh;
+	min-height: 250px;
+	background-size: cover;
+	background-position: bottom;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel-cell img {
+  display: block;
+  height: 200px;
+}
+
+.progress-bar {
+  height: 6px;
+  width: 0;
+  background: $fiveth-color;
+}
+
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
+}

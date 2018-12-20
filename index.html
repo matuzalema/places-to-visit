@@ -4,10 +4,52 @@
 	<meta charset="UTF-8">
 	<title>Places to visit</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="vendor/Normalize.css">
+	<link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<h1> Places to visit</h1>
+<!-- =============================== carousel ========================================= -->
+  <div class="main-carousel">
+    <div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/mountain.jpg)">
+      <div class="container">
+        <h1 class="place">Andy<h1>
+      </div>
+    </div>
+    <div class="carousel-cell" id="carousel-cell2" style="background-image: url(images/sea.jpeg)">
+      <div class="container">
+        <h1 class="place">Mauritius<h1>
+      </div>
+    </div>
+    <div class="carousel-cell" id="carousel-cell3" style="background-image: url(images/city.jpeg)">
+      <div class="container">
+        <h1 class="place">Australia<h1>
+    </div>
+    </div>
+    <div class="carousel-cell" id="carousel-cell4" style="background-image: url(images/dubai.jpg)">
+      <div class="container">
+        <h1 class="place">New Zeland<h1>
+      </div>
+    </div>
+    <div class="carousel-cell" id="carousel-cell5" style="background-image: url(images/mountain.jpeg)">
+      <div class="container">
+      <h1 class="place">Himalayas<h1>
+      </div>
+    </div>
+  </div>
+  <button class="restart">Restart</button>
+  <div class="progress-bar"></div>
+  <p>
+    Photo:
+    <a href="#carousel-cell1">1</a> /
+    <a href="#carousel-cell2">2</a> /
+    <a href="#carousel-cell3">3</a> /
+    <a href="#carousel-cell4">4</a> /
+    <a href="#carousel-cell5">5</a>
+  </p>
+
+<script src="vendor/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
