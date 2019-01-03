@@ -8,6 +8,9 @@ body {
 	color: $third-color;
  }
 
+
+//  ===================== carousel ===========================
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -73,3 +76,10 @@ a {
     height: 400px;
   }
 }
+
+//  ===================== maps ===========================
+
+#map {
+        height: 400px;
+        width: 100%;  
+       }

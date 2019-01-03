@@ -62,3 +62,7 @@ a {
 @media screen and (min-width: 768px) {
   .carousel-cell img {
     height: 400px; } }
+
+#map {
+  height: 400px;
+  width: 100%; }

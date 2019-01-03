@@ -11,32 +11,38 @@
 <body>
 <!-- =============================== carousel ========================================= -->
   <div class="main-carousel">
-    <div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/mountain.jpg)">
+    <!-- <div class="carousel-cell" id="carousel-cell1" style="background-image: url(images/andes.jpg)">
       <div class="container">
-        <h1 class="place">Andy<h1>
+        <h1 class="place">{{{title}}}<h1>
+        <p>{{{description}}}</p>
       </div>
     </div>
-    <div class="carousel-cell" id="carousel-cell2" style="background-image: url(images/sea.jpeg)">
+    <div class="carousel-cell" id="carousel-cell2" style="background-image: url(images/mauritius.jpeg)">
       <div class="container">
-        <h1 class="place">Mauritius<h1>
+        <h1 class="place">{{{title}}}<h1>
+        <p>{{{description}}}</p>
       </div>
     </div>
-    <div class="carousel-cell" id="carousel-cell3" style="background-image: url(images/city.jpeg)">
+    <div class="carousel-cell" id="carousel-cell3" style="background-image: url(images/australia.jpeg)">
       <div class="container">
-        <h1 class="place">Australia<h1>
-    </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell4" style="background-image: url(images/dubai.jpg)">
-      <div class="container">
-        <h1 class="place">New Zeland<h1>
+        <h1 class="place">{{{title}}}<h1>
+        <p>{{{description}}}</p>
       </div>
     </div>
-    <div class="carousel-cell" id="carousel-cell5" style="background-image: url(images/mountain.jpeg)">
+    <div class="carousel-cell" id="carousel-cell4" style="background-image: url(images/new-zeland.jpg)">
       <div class="container">
-      <h1 class="place">Himalayas<h1>
+        <h1 class="place">{{{title}}}s<h1>
+        <p>{{{description}}}</p>
       </div>
     </div>
-  </div>
+    <div class="carousel-cell" id="carousel-cell5" style="background-image: url(images/hymalays.jpeg)">
+      <div class="container">
+      <h1 class="place">{{{title}}}<h1>
+      <p>{{{description}}}</p>
+      </div>
+    </div>-->
+  </div> 
+  
   <button class="restart">Restart</button>
   <div class="progress-bar"></div>
   <p>
@@ -48,8 +54,58 @@
     <a href="#carousel-cell5">5</a>
   </p>
 
+<!-- ==================== maps ================================= -->
+
+<!-- <h3>My Google Maps</h3>
+    <div id="map"></div> -->
+
+<!-- ======================= scripts ========================= -->
+<script id="slides" type="x-tmpl-mustache">
+  <div class="container">
+    <h1 class="place">{{{title}}}<h1>
+    <ul>{{{description}}}</ul>
+  </div>
+</script>
+
+<script>
+var carouselData = [
+  {
+    image: '', 
+    title: 'Andes',
+    description: "<p> The Andes are the longest continental mountain range in the world, forming a continuous highland along the western edge of South America.</p> <img src='images/andes-min.jpeg' alt='Andes photo'>"
+  },
+  {
+    image: '', 
+    title: 'Mauritius',
+    description: "<p> Mauritius is an island nation in the Indian Ocean. The main Island of Mauritius is located about 2,000 kilometres off the southeast coast of the African continent.</p> <img src='images/mauritius-min.jpeg' alt='Mauritius photo'>"
+  },
+  {
+    image: '', 
+    title: 'Australia',
+    description: "<p> Australia is a highly developed country, with the world's 13th-largest economy. It has a high-income economy, with the world's tenth-highest per capita income.</p> <img src='images/austalia-min.jpeg' alt='Australia photo'>"
+  },
+  {
+    image: '', 
+    title: 'New Zeland',
+    description: "<p> New Zealand is an island country in the southwestern Pacific Ocean. </p> <img src='images/new-zeland-min.jpeg' alt='New Zeland photo'>"
+  },
+  {
+    image: '', 
+    title: 'Himalays',
+    description: "<p> The Himalayan range has many of the Earth's highest peaks, including the highest, Mount Everest. </p> <img src='images/hymalays-min.jpeg' alt='Himalays photo'>"
+  } 
+];
+</script>
+<!-- carousel scripts -->
 <script src="vendor/flickity.pkgd.min.js"></script>
 <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+<!-- mustache  -->
+<script src="js/mustache.js"></script>
+<!-- js main -->
 <script src="js/script.js"></script>
+<!-- map script with my API key-->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvs0VSMYz_G0u8h3c80-DBR4vNSkSaS9M&callback=initMap">
+</script>
 </body>
 </html>
