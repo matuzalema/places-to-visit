@@ -13,13 +13,16 @@ body {
 
 .container {
 	max-width: 1200px;
-	margin: 0 auto;
-	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 h1.place {
 	color: $third-color;
 	text-shadow: 1px 1px $fourth-color;
+	display: block;
 }
 
 .restart {
@@ -59,27 +62,41 @@ a {
 	align-items: center;
 }
 
+#slides {
+	background-color: red;
+	height: 50vh;
+}
 .carousel-cell img {
   display: block;
-  height: 200px;
+  height: 300px;
 }
 
+.container {
+	display: flex;
+	justify-content: center;
+}
 .progress-bar {
   height: 6px;
   width: 0;
   background: $fiveth-color;
 }
 
-
-@media screen and ( min-width: 768px ) {
-  .carousel-cell img {
-    height: 400px;
-  }
+p {
+	font-size: 18px;
 }
+
+.description {
+	text-align: center;
+}
+// @media screen and ( min-width: 768px ) {
+//   .carousel-cell img {
+//     height: 400px;
+//   }
+// }
 
 //  ===================== maps ===========================
 
-#map {
-        height: 400px;
-        width: 100%;  
-       }
+// #map {
+//         height: 400px;
+//         width: 100%;  
+//        }

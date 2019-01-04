@@ -8,12 +8,19 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
-  width: 200px; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column; }
 
 h1.place {
   color: #fff;
-  text-shadow: 1px 1px #000; }
+  text-shadow: 1px 1px #000;
+  display: block; }
 
 .restart {
   position: absolute;
@@ -50,19 +57,27 @@ a {
   -ms-flex-align: center;
       align-items: center; }
 
+#slides {
+  background-color: red;
+  height: 50vh; }
+
 .carousel-cell img {
   display: block;
-  height: 200px; }
+  height: 300px; }
+
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
 
 .progress-bar {
   height: 6px;
   width: 0;
   background: #5352ed; }
 
-@media screen and (min-width: 768px) {
-  .carousel-cell img {
-    height: 400px; } }
+p {
+  font-size: 18px; }
 
-#map {
-  height: 400px;
-  width: 100%; }
+.description {
+  text-align: center; }

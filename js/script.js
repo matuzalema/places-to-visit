@@ -1,18 +1,18 @@
+
 // ====================== mustache ======================
-var templateSlide = document.querySelector('.container');
-var templateCarousel = document.querySelector('.main-carousel');
+var templateSlide = document.querySelector('.slides').innerHTML;
+var elem = document.querySelector('.main-carousel');
 var slideItems = '';
 Mustache.parse(templateSlide);
-
 for(var i=0; i<carouselData.length; i++){
 	slideItems += Mustache.render(templateSlide, carouselData[i]);
 	}
 
-templateCarousel.insertAdjacentHTML('beforeend', slideItems);
+elem.insertAdjacentHTML('beforeend', slideItems);
 
 // ============= carousel (external js: flickity.pkgd.js) ======
 
-var elem = document.querySelector('.main-carousel');
+// var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   cellAlign: 'left',
   contain: true,
@@ -46,3 +46,4 @@ flkty.on( 'scroll', function( progress ) {
 //   // The marker, positioned at Uluru
 //   var marker = new google.maps.Marker({position: uluru, map: map});
 // }
+

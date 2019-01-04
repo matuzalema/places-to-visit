@@ -60,39 +60,48 @@
     <div id="map"></div> -->
 
 <!-- ======================= scripts ========================= -->
-<script id="slides" type="x-tmpl-mustache">
-  <div class="container">
-    <h1 class="place">{{{title}}}<h1>
-    <ul>{{{description}}}</ul>
+<script class="slides" type="x-tmpl-mustache">
+
+  <div class="carousel-cell" id="{{{id}}}" style="background-image: {{{image}}}">
+      <div class="container">
+              <h1 class="place">{{{title}}}<h1>
+          <div class="description"> {{{description}}} </div>
+      </div>
   </div>
+
 </script>
 
 <script>
 var carouselData = [
   {
-    image: '', 
+    id: 'carousel-cell1',
+    image: 'url(images/andes.jpg)', 
     title: 'Andes',
-    description: "<p> The Andes are the longest continental mountain range in the world, forming a continuous highland along the western edge of South America.</p> <img src='images/andes-min.jpeg' alt='Andes photo'>"
+    description: "<p class='description'> The Andes are the longest continental mountain range in the world, forming a continuous highland along the western edge of South America.</p>"
   },
   {
-    image: '', 
+    id: 'carousel-cell2',
+    image: 'url(images/mauritius.jpeg)', 
     title: 'Mauritius',
-    description: "<p> Mauritius is an island nation in the Indian Ocean. The main Island of Mauritius is located about 2,000 kilometres off the southeast coast of the African continent.</p> <img src='images/mauritius-min.jpeg' alt='Mauritius photo'>"
+    description: "<p class='description'> Mauritius is an island nation in the Indian Ocean. The main Island of Mauritius is located about 2,000 kilometres off the southeast coast of the African continent.</p>"
   },
   {
-    image: '', 
+    id: 'carousel-cell3',
+    image: 'url(images/australia.jpeg)', 
     title: 'Australia',
-    description: "<p> Australia is a highly developed country, with the world's 13th-largest economy. It has a high-income economy, with the world's tenth-highest per capita income.</p> <img src='images/austalia-min.jpeg' alt='Australia photo'>"
+    description: "<p class='description'> Australia is a highly developed country, with the world's 13th-largest economy. It has a high-income economy, with the world's tenth-highest per capita income.</p>"
   },
   {
-    image: '', 
+    id: 'carousel-cell4',
+    image: 'url(images/new-zeland.jpg)', 
     title: 'New Zeland',
-    description: "<p> New Zealand is an island country in the southwestern Pacific Ocean. </p> <img src='images/new-zeland-min.jpeg' alt='New Zeland photo'>"
+    description: "<p class='description'> New Zeland is an island country in the southwestern Pacific Ocean. </p>"
   },
   {
-    image: '', 
+    id: 'carousel-cell5',
+    image: 'url(images/hymalays.jpeg)', 
     title: 'Himalays',
-    description: "<p> The Himalayan range has many of the Earth's highest peaks, including the highest, Mount Everest. </p> <img src='images/hymalays-min.jpeg' alt='Himalays photo'>"
+    description: "<p class='description'> The Himalayan range has many of the Earth's highest peaks, including the highest, Mount Everest. </p>"
   } 
 ];
 </script>
@@ -104,8 +113,8 @@ var carouselData = [
 <!-- js main -->
 <script src="js/script.js"></script>
 <!-- map script with my API key-->
-<script async defer
+<!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvs0VSMYz_G0u8h3c80-DBR4vNSkSaS9M&callback=initMap">
-</script>
+</script> -->
 </body>
 </html>
