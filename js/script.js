@@ -36,14 +36,44 @@ flkty.on( 'scroll', function( progress ) {
 });
 
 // ====================== map ============================
+var infos = document.getElementById('infos');
 
-// window.initMap = function() {
-//   // The location of Uluru
-//   var uluru = {lat: -25.344, lng: 131.036};
-//   // The map, centered at Uluru
-//   var map = new google.maps.Map(
-//       document.getElementById('map'), {zoom: 4, center: uluru});
-//   // The marker, positioned at Uluru
-//   var marker = new google.maps.Marker({position: uluru, map: map});
-// }
+    window.initMap = function() {  
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 1,
+        center: carouselData[0].coords
+      });
 
+
+for (var i=0; i<carouselData.length; i++){
+  var marker = new google.maps.Marker({
+      position: carouselData[i].coords,
+      map: map
+    });
+  
+  marker.addListener('click', function(){
+      infos.innerHTML = 'You clicked on: ';
+     // event.preventDefault();
+   }); 
+}
+// ============= maker one ================
+//     var markerOne = new google.maps.Marker({
+//       position: andesMap,
+//       map: map
+//     });
+    
+//     markerOne.addListener('click', function(){
+//       infos.innerHTML = 'You clicked on Andes';
+//     });  
+
+// // ============= maker two ================ 
+//   var markerTwo = new google.maps.Marker({
+//       position: mauritiusMap,
+//       map: map
+//     });
+    
+//     markerTwo.addListener('click', function(){
+//       infos.innerHTML = 'You clicked on Mauritius';
+//     });  
+      
+};

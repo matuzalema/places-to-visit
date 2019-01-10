@@ -1,6 +1,10 @@
 @import "variables";
 
-* { box-sizing: border-box; }
+* { 
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 body { 
 	font-family: sans-serif;
@@ -61,15 +65,10 @@ a {
 	justify-content: center;
 	align-items: center;
 }
-
-#slides {
-	background-color: red;
-	height: 50vh;
-}
-.carousel-cell img {
-  display: block;
-  height: 300px;
-}
+// .carousel-cell img {
+//   display: block;
+//   height: 300px;
+// }
 
 .container {
 	display: flex;
@@ -88,15 +87,13 @@ p {
 .description {
 	text-align: center;
 }
-// @media screen and ( min-width: 768px ) {
-//   .carousel-cell img {
-//     height: 400px;
-//   }
-// }
+
 
 //  ===================== maps ===========================
 
-// #map {
-//         height: 400px;
-//         width: 100%;  
-//        }
+#map {
+    width: 100%;
+    background-color: grey;
+    height: 50vh;
+    min-height: 250px;
+   }

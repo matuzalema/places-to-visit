@@ -14,19 +14,18 @@
   
   <button class="restart">Restart</button>
   <div class="progress-bar"></div>
-  <p>
+<!--   <p>
     Photo:
     <a href="#carousel-cell1">1</a> /
     <a href="#carousel-cell2">2</a> /
     <a href="#carousel-cell3">3</a> /
     <a href="#carousel-cell4">4</a> /
     <a href="#carousel-cell5">5</a>
-  </p>
+  </p> -->
 
 <!-- ==================== maps ================================= -->
-
-<!-- <h3>My Google Maps</h3>
-    <div id="map"></div> -->
+<p id="infos"></p>
+<div id="map"></div>
 
 <!-- ======================= scripts ========================= -->
 <script class="slides" type="x-tmpl-mustache">
@@ -42,31 +41,36 @@
 
 <script>
 var carouselData = [
-  {
+  { 
+    coords: {lat: -15.722809, lng: -67.569402},
     id: 'carousel-cell1',
     image: 'url(images/andes.jpg)', 
     title: 'Andes',
     description: "<p class='description'> The Andes are the longest continental mountain range in the world, forming a continuous highland along the western edge of South America.</p>"
   },
-  {
+  { 
+    coords: {lat: -20.207492, lng: 57.542247},
     id: 'carousel-cell2',
     image: 'url(images/mauritius.jpeg)', 
     title: 'Mauritius',
     description: "<p class='description'> Mauritius is an island nation in the Indian Ocean. The main Island of Mauritius is located about 2,000 kilometres off the southeast coast of the African continent.</p>"
   },
   {
+    coords: {lat: -22.439379, lng: 132.710999},
     id: 'carousel-cell3',
     image: 'url(images/australia.jpeg)', 
     title: 'Australia',
     description: "<p class='description'> Australia is a highly developed country, with the world's 13th-largest economy. It has a high-income economy, with the world's tenth-highest per capita income.</p>"
   },
   {
+    coords: {lat: -42.165348, lng: 171.827258},
     id: 'carousel-cell4',
     image: 'url(images/new-zeland.jpg)', 
     title: 'New Zeland',
     description: "<p class='description'> New Zeland is an island country in the southwestern Pacific Ocean. </p>"
   },
   {
+    coords: {lat: 29.102641, lng:  83.837558},
     id: 'carousel-cell5',
     image: 'url(images/hymalays.jpeg)', 
     title: 'Himalays',
@@ -82,8 +86,8 @@ var carouselData = [
 <!-- js main -->
 <script src="js/script.js"></script>
 <!-- map script with my API key-->
-<!-- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvs0VSMYz_G0u8h3c80-DBR4vNSkSaS9M&callback=initMap">
-</script> -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUTPydGAimC-c88u_WQ1kCTegpHY52eM&callback=initMap">
+</script>
 </body>
 </html>
