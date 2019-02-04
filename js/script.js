@@ -36,7 +36,7 @@ flkty.on( 'scroll', function( progress ) {
 });
 
 // ====================== map ============================
-var infos = document.getElementById('infos');
+var infos = document.querySelector('.infos');
 
     window.initMap = function() {  
       var map = new google.maps.Map(document.getElementById('map'), {
@@ -48,12 +48,16 @@ var infos = document.getElementById('infos');
 for (var i=0; i<carouselData.length; i++){
   var marker = new google.maps.Marker({
       position: carouselData[i].coords,
-      map: map
+      map: map,
+      title: carouselData[i].title,
+      description: carouselData[i].description
     });
+
   
   marker.addListener('click', function(){
-      infos.innerHTML = 'You clicked on: ';
-     // event.preventDefault();
+      infos.innerHTML = '<h2 class="second-header">' + this.title 
+      +'</h2>' + '<p>' + this.description + '</p>';
+      // document.getElementsByClassName('infos').style.color = green;
    }); 
 }
 // ============= maker one ================
