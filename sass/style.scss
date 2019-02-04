@@ -82,10 +82,13 @@ a {
 
 p {
 	font-size: 18px;
+	color: #55335a;
+
 }
 
 .description {
 	text-align: center;
+	margin: 20px 120px;
 }
 
 
@@ -101,15 +104,7 @@ p {
 //  ===================== descriptions ===========================
 
 .infos {
-	text-align: center;
-	line-height: 60px;
-	// margin: 20px 60px;
+	line-height: 26px;
 }
-.second-header{
-	padding-bottom: 20px;
-	color: #3c3c66;
-}
-.description {
-	line-height: 24px;
-	margin: 0 60px 30px 60px;
-}
+
+

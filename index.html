@@ -30,27 +30,28 @@
 <!-- ======================= scripts ========================= -->
 <script class="slides" type="x-tmpl-mustache">
 
- <div class="carousel-cell" id="{{{id}}}" style="background-image: {{{image}}}">
-      <div class="container">
-              <h1 class="place">{{{title}}}<h1>
-          <!-- <div class="description"> {{{description}}} </div> -->
-      </div>
+  <div class="carousel-cell" id="{{{id}}}" style="background-image: {{{image}}}">
+    <div class="container">
+      <h1 class="place">{{{title}}}<h1>
+    </div>
   </div>
 
 </script>
 
 <script>
 var carouselData = [
-  { 
+  {
     coords: {lat: -15.722809, lng: -67.569402},
     id: 'carousel-cell1',
+    index: 0,
     image: 'url(images/andes.jpg)', 
     title: 'Andes',
     description: "<p class='description'> The Andes are the longest continental mountain range in the world, forming a continuous highland along the western edge of South America.</p>"
   },
-  { 
+  {
     coords: {lat: -20.207492, lng: 57.542247},
     id: 'carousel-cell2',
+    index: 1,
     image: 'url(images/mauritius.jpeg)', 
     title: 'Mauritius',
     description: "<p class='description'> Mauritius is an island nation in the Indian Ocean. The main Island of Mauritius is located about 2,000 kilometres off the southeast coast of the African continent.</p>"
@@ -58,6 +59,7 @@ var carouselData = [
   {
     coords: {lat: -22.439379, lng: 132.710999},
     id: 'carousel-cell3',
+    index: 2,
     image: 'url(images/australia.jpeg)', 
     title: 'Australia',
     description: "<p class='description'> Australia is a highly developed country, with the world's 13th-largest economy. It has a high-income economy, with the world's tenth-highest per capita income.</p>"
@@ -65,6 +67,7 @@ var carouselData = [
   {
     coords: {lat: -42.165348, lng: 171.827258},
     id: 'carousel-cell4',
+    index: 3,
     image: 'url(images/new-zeland.jpg)', 
     title: 'New Zeland',
     description: "<p class='description'> New Zeland is an island country in the southwestern Pacific Ocean. </p>"
@@ -72,6 +75,7 @@ var carouselData = [
   {
     coords: {lat: 29.102641, lng:  83.837558},
     id: 'carousel-cell5',
+    index: 4,
     image: 'url(images/hymalays.jpeg)', 
     title: 'Himalays',
     description: "<p class='description'> The Himalayan range has many of the Earth's highest peaks, including the highest, Mount Everest. </p>"

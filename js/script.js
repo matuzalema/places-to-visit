@@ -45,39 +45,21 @@ var infos = document.querySelector('.infos');
       });
 
 
-for (var i=0; i<carouselData.length; i++){
-  var marker = new google.maps.Marker({
-      position: carouselData[i].coords,
-      map: map,
-      title: carouselData[i].title,
-      description: carouselData[i].description
-    });
+  for (var i=0; i<carouselData.length; i++){
+    var marker = new google.maps.Marker({
+        position: carouselData[i].coords,
+        map: map,
+        title: carouselData[i].title,
+        index: carouselData[i].index,
+        description: carouselData[i].description,
+      });
 
-  
-  marker.addListener('click', function(){
-      infos.innerHTML = '<h2 class="second-header">' + this.title 
-      +'</h2>' + '<p>' + this.description + '</p>';
-      // document.getElementsByClassName('infos').style.color = green;
-   }); 
-}
-// ============= maker one ================
-//     var markerOne = new google.maps.Marker({
-//       position: andesMap,
-//       map: map
-//     });
     
-//     markerOne.addListener('click', function(){
-//       infos.innerHTML = 'You clicked on Andes';
-//     });  
-
-// // ============= maker two ================ 
-//   var markerTwo = new google.maps.Marker({
-//       position: mauritiusMap,
-//       map: map
-//     });
-    
-//     markerTwo.addListener('click', function(){
-//       infos.innerHTML = 'You clicked on Mauritius';
-//     });  
-      
+    marker.addListener('click', function(){
+        infos.innerHTML = '<p>' + this.description + '</p>';
+        flkty.select(this.index);
+        map.panTo(this.position);
+        map.setZoom(3); 
+     });
+  }     
 };
