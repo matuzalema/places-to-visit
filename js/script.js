@@ -12,7 +12,6 @@ elem.insertAdjacentHTML('beforeend', slideItems);
 
 // ============= carousel (external js: flickity.pkgd.js) ======
 
-// var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   cellAlign: 'left',
   contain: true,
@@ -34,6 +33,8 @@ flkty.on( 'scroll', function( progress ) {
   progress = Math.max( 0, Math.min( 1, progress ) );
   progressBar.style.width = progress * 100 + '%';
 });
+
+
 
 // ====================== map ============================
 var infos = document.querySelector('.infos');
@@ -61,5 +62,10 @@ var infos = document.querySelector('.infos');
         map.panTo(this.position);
         map.setZoom(3); 
      });
+
   }     
+    
+    flkty.on('change', function(index){
+      map.panTo(carouselData[index].coords);
+    });
 };
