@@ -69,5 +69,6 @@ var infos = document.querySelector('.infos');
     flkty.on('change', function(index){
       map.panTo(carouselData[index].coords);
       infos.innerHTML = '<p>' + carouselData[index].description + '</p>';
+      map.setZoom(3);
     });
 };
