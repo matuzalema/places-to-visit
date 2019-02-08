@@ -25,6 +25,7 @@ flkty.selectCell( '.carousel-cell', true, true);
 var buttonRestart = document.querySelector('.restart');
 buttonRestart.addEventListener('click', function(){
 	flkty.select( 0 );
+  infos.innerHTML = '<p>' + carouselData[0].description + '</p>';
 });
 
 	// progress-bar
